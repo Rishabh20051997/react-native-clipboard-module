@@ -15,7 +15,7 @@ import { ClipboardModuleView } from "react-native-clipboard-module";
 
 // ...
 
-<ClipboardModuleView color="tomato" />
+<ClipboardModuleView />
 ```
 
 ## Contributing

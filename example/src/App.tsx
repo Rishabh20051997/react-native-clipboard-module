@@ -6,7 +6,7 @@ import { ClipboardModuleView } from 'react-native-clipboard-module';
 export default function App() {
   return (
     <View style={styles.container}>
-      <ClipboardModuleView color="#32a852" style={styles.box} />
+      <ClipboardModuleView />
     </View>
   );
 }

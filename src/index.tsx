@@ -1,9 +1,6 @@
-import {
-  requireNativeComponent,
-  UIManager,
-  Platform,
-  type ViewStyle,
-} from 'react-native';
+import React from 'react';
+import { UIManager, Platform, TouchableOpacity, Text } from 'react-native';
+import Clipboard from '@react-native-clipboard/clipboard';
 
 const LINKING_ERROR =
   `The package 'react-native-clipboard-module' doesn't seem to be linked. Make sure: \n\n` +
@@ -11,16 +8,23 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-type ClipboardModuleProps = {
-  color: string;
-  style: ViewStyle;
-};
-
 const ComponentName = 'ClipboardModuleView';
+
+export const ClipboardTestingModuleView = () => {
+  return (
+    <TouchableOpacity
+      onPress={() => {
+        Clipboard.setString('Sample Test Id');
+      }}
+    >
+      <Text>Sample Test Id</Text>
+    </TouchableOpacity>
+  );
+};
 
 export const ClipboardModuleView =
   UIManager.getViewManagerConfig(ComponentName) != null
-    ? requireNativeComponent<ClipboardModuleProps>(ComponentName)
+    ? ClipboardTestingModuleView
     : () => {
         throw new Error(LINKING_ERROR);
       };
