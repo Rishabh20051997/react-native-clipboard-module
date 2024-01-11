@@ -1,6 +1,6 @@
 {
   "name": "react-native-clipboard-module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Testing Clipboard linking",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -80,8 +80,7 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*",
-    "@react-native-clipboard/clipboard": "*"
+    "react-native": "*"
   },
   "workspaces": [
     "example"
@@ -162,5 +161,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "@react-native-clipboard/clipboard": "^1.13.2"
   }
 }
